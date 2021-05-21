@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Inicio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Mi Sitio</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/intereses">Intereses</a></li>
+                    <li><a href="/reflexion">Reflexiones</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>Sitio de {{ nombre }}</h1>
+            <img src="{{url_for('static', filename='Hey.jpg')}}" width="150" height="200">
+            <p>Un lugar de las cosas que me representan...</p>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-3 text-center">
+        <h3>Algunas cosas en las que he trabajado que me gustaron mucho uwu</h3><br>
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <p>Claustro</p>
+                <a href="https://wiritos.itch.io/claustro">
+                    <img src="{{url_for('static', filename='claustro.png')}}" class="img-responsive" style="width:100%"
+                        alt="Image"></a>
+            </div>
+            <div class="col-sm-4">
+                <p>Out Of Gravity</p>
+                <a href="https://wiritos.itch.io/out-of-gravity">
+                    <img src="{{url_for('static', filename='oog.png')}}" class="img-responsive" style="width:100%"
+                        alt="Image"></a>
+            </div>
+            <div class="col-sm-4">
+                <p>Project Solaris</p>
+                <a href="https://github.com/DuckyBoy343/ARSolaris">
+                    <img src="{{url_for('static', filename='solaris.png')}}" class="img-responsive" style="width:100%"
+                        alt="Image"></a>
+            </div>
+        </div>
+    </div><br>
+    </div><br><br>
+
+    <footer class="container-fluid text-center">
+        <div class="container pt-1">
+            <a href="#" data-toggle="tooltip" title="4731552041" onclick="myFunction()">Contacto</a>
+            Correo: <a href="mailto:urielmt343@gmail.com">urielmt343@gmail.com</a><br>
+            Instituto Tecnológico Superior de Guanajuato
+            <br>
+            <script>
+                $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+
+                function myFunction() {
+                    alert("Esta es la informacion de contacto telefónico");
+                }
+            </script>
+            <sections class="mb-1">
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="https://github.com/DuckyBoy343/SitioCAADI" role="button" data-mdb-ripple-color="dark"><i
+                        class="bi bi-github"></i></a>
+                </section>
+        </div>
+    </footer>
+
+</body>
+
+</html>
